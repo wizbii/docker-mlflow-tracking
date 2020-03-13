@@ -1,11 +1,10 @@
 FROM continuumio/miniconda3
 
-#ARG HDFS_URI=hdfs://spark1.internal.wizbii.com:9000/data/mlflow/artifact
-
 WORKDIR /app
 
 ENV HADOOP_HOME /app/hadoop-2.9.2
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+ENV HDFS_URI hdfs://localhost:9000
 
 RUN mkdir /usr/share/man/man1/
 RUN mkdir /data
